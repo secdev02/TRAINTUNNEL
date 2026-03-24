@@ -1,0 +1,17 @@
+{
+  "name": "proxy-server",
+  "version": "1.0.0",
+  "description": "Lightweight HTTP/HTTPS forward proxy for Railway",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "logs": "tail -f /data/proxy.log",
+    "logs:dump": "cat /data/proxy.log"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "http-proxy": "^1.18.1"
+  }
+}

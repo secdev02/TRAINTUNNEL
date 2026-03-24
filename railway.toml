@@ -1,0 +1,22 @@
+[build]
+builder = "nixpacks"
+
+[deploy]
+startCommand = "node index.js"
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 5
+
+[[services]]
+name = "proxy-server"
+
+[services.variables]
+PROXY_USER = "admin"
+PROXY_PASS = "changeme"
+IP_ALLOWLIST = ""
+NODE_ENV = "production"
+LOG_DIR = "/data"
+LOG_MAX_BYTES = "52428800"
+
+[[volumes]]
+name = "proxy-logs"
+mountPath = "/data"
