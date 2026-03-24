@@ -9,7 +9,7 @@ restartPolicyMaxRetries = 5
 [[services]]
 name = "proxy-server"
 
-[services.variables]
+[variables]
 PROXY_USER = "admin"
 PROXY_PASS = "changeme"
 IP_ALLOWLIST = ""
